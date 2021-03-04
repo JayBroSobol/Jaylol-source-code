@@ -1,7 +1,7 @@
 module.exports = {
     name: 'kick',
     description: "This command kicks a member!",
-    execute(client, message, args) {
+    execute(message,) {
         if (message.member.roles.cache.has(process.env.staff)) {
 
             const target = message.mentions.users.first();

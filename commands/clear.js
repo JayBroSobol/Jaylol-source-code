@@ -4,7 +4,7 @@ const Discord = require('discord.js');
 module.exports = {
     name: 'clear',
     description: "Clear messages!",
-   async  execute(client, message, args) {
+   async  execute(message, args) {
 
      const Embed = new Discord.MessageEmbed()
      .setColor('#0099ff')
@@ -26,7 +26,7 @@ module.exports = {
         
         if(args[0] < 1) return message.reply("You have to delete at least one message!");
  
-        await message.channel.messages.fetch({ limit: args[0]+1}).then(messages =>{
+        await message.channel.messages.fetch({ limit: args[0]}).then(messages =>{
             message.channel.bulkDelete(messages)
     });
        } else{

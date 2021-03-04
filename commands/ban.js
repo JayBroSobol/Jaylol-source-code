@@ -1,7 +1,7 @@
 module.exports = {
     name: 'ban',
     description: "This command bans a member!",
-    execute(client, message, args){
+    execute(message, args){
         if(message.member.roles.cache.has(process.env.staff)){
 
             const target = message.mentions.users.first();

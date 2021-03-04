@@ -1,7 +1,7 @@
 module.exports = {
     name: 'bruh',
     description: "flips you off",
-    execute(client, message, args){
+    execute(message){
         var ran = Math.random()
 
         if (ran > 0.5){

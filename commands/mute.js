@@ -2,13 +2,13 @@ const ms = require('ms');
 module.exports = {
     name: 'mute',
     description: "This mutes a member",
-    execute(client, message, args) {
+    execute(message, args) {
 
         if(message.member.roles.cache.has(process.env.staff)){
             const target = message.mentions.users.first();
             if (target) {
      
-                let mainRole = message.guild.roles.cache.find(role => role.name === 'theOGs');
+                let mainRole = message.guild.roles.cache.find(role => role.name === 'Member');
                 let muteRole = message.guild.roles.cache.find(role => role.name === 'Muted');
      
                 let memberTarget = message.guild.members.cache.get(target.id);
